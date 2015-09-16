@@ -52,16 +52,21 @@ var Imgix = React.createClass({
   render: function render() {
     var srcs = this.getOptimizedSrcs();
 
-    var srcSet = srcs.dpr1 + ' 1x, ' + srcs.dpr2 + ' 2x, ' + srcs.dpr3 + ' 3x';
+    // The dpr=1 value is omitted because it is implied by the `src` attribute.
+    // The dpr=3 case is rare, but because the URL is so similar it costs little
+    // over a gzipped connection.
+    var srcSet = `${srcs.dpr2} 2x, ${srcs.dpr3} 3x`;
 
     return React.createElement('img', {
       src: srcs.dpr1,
       srcSet: srcSet,
-      className: this.props.className,
-      width: this.props.width,
-      height: this.props.height,
-      style: { maxWidth: this.props.width, maxHeight: this.props.height },
+      // NOTE this omits other passed-in props to stay light in ES5 and not require
+      // an Object.assign or similar function.
       alt: this.props.alt
+      className: this.props.className,
+      height: this.props.height,
+      style: this.props.style,
+      width: this.props.width,
     });
   }
 

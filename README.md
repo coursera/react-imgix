@@ -15,7 +15,7 @@ Densities](http://www.html5rocks.com/en/mobile/high-dpi/).
 
 ## Usage
 
-This code currently assumes that you have a proxy server set up that handles the authentication to Imgix. Suppose your server is http://assets.example.com/imgProxy/ and you want your page to display an asset you have stored in S3 at https://s3.amazonaws.com/examplecom/logo.jpg.
+This code currently assumes that you have a proxy server set up that handles the authentication to Imgix. Suppose your server is http://assets.example.com/imgProxy/ and you want your page to display an asset you have stored in S3 at https://s3.amazonaws.com/examplecom/logo.jpg. (Any PRs to support client-authenticated requests with [imgix-core-js](https://github.com/imgix/imgix-core-js) are welcomed.)
 
 This React code:
 ```jsx
@@ -27,7 +27,6 @@ resolves to this HTML in the browser:
 <img
   src="http://assets.example.com/imgProxy/https://s3.amazonaws.com/examplecom/logo.jpg?auto=format&amp;dpr=1&amp;w=&amp;h=40"
   srcset="
-    http://assets.example.com/imgProxy/https://s3.amazonaws.com/examplecom/logo.jpg?auto=format&amp;dpr=1&amp;w=&amp;h=40 1x
     http://assets.example.com/imgProxy/https://s3.amazonaws.com/examplecom/logo.jpg?auto=format&amp;dpr=2&amp;w=&amp;h=40 2x
     http://assets.example.com/imgProxy/https://s3.amazonaws.com/examplecom/logo.jpg?auto=format&amp;dpr=3&amp;w=&amp;h=40 3x
     "

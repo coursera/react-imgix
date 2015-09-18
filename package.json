@@ -1,0 +1,23 @@
+{
+  "name": "react-imgix",
+  "version": "0.1.0",
+  "description": "Isomorphic React component for images scaling and manipulation using Imgix",
+  "main": "Imgix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coursera/react-imgix.git"
+  },
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "author": "Turadg Aleahmad <turadg@coursera.org> (http://turadg.aleahmad.net/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/coursera/react-imgix/issues"
+  },
+  "homepage": "https://github.com/coursera/react-imgix#readme"
+}

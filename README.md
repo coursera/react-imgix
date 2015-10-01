@@ -50,5 +50,5 @@ The `<Imgix>` component *requires* the `alt` property so that the developer must
 
 For these cases there is `Imgix.DECORATIVE`,
 ```jsx
-<Imgix src="https://s3.amazonaws.com/examplecom/arrow.jpg" alt={Img.DECORATIVE} />
+<Imgix src="https://s3.amazonaws.com/examplecom/arrow.jpg" alt={Imgix.DECORATIVE} />
 ```
